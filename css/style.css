@@ -1,0 +1,336 @@
+
+/* Clear browser margins and padding */
+
+* { 
+
+ margin:0; padding:0;
+
+}
+
+
+
+body {
+
+ color:#495262;
+ font-family: 'Titillium Web', sans-serif;
+ background: #F8EEEF;
+ /* width:100%;*/ 
+}
+
+.container {
+   
+ display: grid;
+ grid-gap: 10px;
+ grid-template-columns: 100%;
+ grid-template-rows: min-content auto min-content auto 50px auto;
+ grid-template-areas:
+    "header"
+    "image"
+    "tribute-info"
+    "quote"
+    "link"
+    "footer";
+
+}
+
+
+
+/* Header related */
+
+.item1 {  
+
+ grid-area: header;
+ justify-self: center;
+
+}
+
+ #title {
+
+ font-size: 26vw;
+ color:#495262;
+ font-family: 'Dorsa', sans-serif;
+ margin-top: 20px;
+  
+}
+ 
+
+  /* -- image related stuff*/
+
+.item2 {
+
+ max-width: 850px;
+ grid-area: image;
+ justify-self:center;
+
+   
+}
+
+
+#image {
+
+ max-width: 100%;
+ height:auto;
+ border-radius: 5px 5px 0px 0px;
+ 
+}
+
+
+
+figure {
+
+ background: white;
+ border-radius: 7px;
+ /*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
+ max-width:100%; 
+ height: auto;        
+
+}
+
+figure p {
+
+ margin: 0 0 5px 5px;
+
+}
+
+figcaption {
+
+ padding:  5px;
+
+}
+
+
+/* tribute info related*/
+
+  
+.item3 {
+
+ grid-area: tribute-info;
+ justify-self:end;
+ margin-top: 10px;
+ 
+}
+
+h2 {
+
+ text-align: center;
+ margin-bottom: 10px;
+  
+}
+
+
+
+li {
+
+ list-style: none;
+ padding: 0 25px 0 30px;
+
+}
+
+.item3 span {
+
+ font-size: 20px;
+ font-weight: bolder;
+
+}
+
+/* quote style goes here*/
+
+.item4 {
+
+ grid-area: quote;
+ font-style: italic;
+ font-size: 1.5em;
+ margin-right: 30px;
+ justify-self:center;
+
+
+}
+
+
+blockquote {
+
+ margin: 0 auto;
+ padding: 1em 0.3em 1em 1em;
+ /*border-right: 5px solid #999;*/
+
+}
+
+
+blockquote p {
+
+ color: #555;
+ font-size: 12pt;
+ line-height: 1.4;
+ text-align: center;
+  
+}
+
+blockquote footer {
+
+ margin-top: .5em;
+ padding: 0;
+ color: #777;
+ font-size: 12pt;
+ text-align: right;
+ font-style: italic;
+
+}
+
+blockquote footer:before {
+
+ content: '— ';
+
+}
+
+
+
+
+/* wikipedia link */
+
+.item5 {
+
+ grid-area: link;
+ justify-self:center;
+ text-align: center;
+ padding: 0 10px 0 10px;
+
+}
+
+
+
+
+#tribute-link:link, #tribute-link:visited {
+        
+ color: #4680AE;
+ text-decoration: none;
+
+}
+
+#tribute-link:hover, #tribute-link:active {
+ 
+ color: #4BC1E5;
+ text-decoration: underline;
+
+}
+
+
+
+
+/* footer related */
+
+.item6 {
+
+ grid-area: footer;
+ justify-self:center;
+ margin-bottom: 20px;
+
+}
+
+hr {
+
+ display: block;
+ height: 1px;
+ border: 0;
+ border-top: 1px solid #ccc;
+ margin: 1em 0;
+ padding: 0; 
+
+}
+  
+
+a:link, a:visited {
+ text-decoration:none;
+ color: #4680AE;
+
+}
+
+a:hover, a:active {
+
+ color: #4BC1E5;
+ text-decoration: none;
+
+}
+
+
+
+/* Media queries */
+
+
+@media only screen and (min-width: 600px) { 
+
+ #title {
+  font-size: 12em;
+
+ }
+
+}
+
+@media only screen and (min-width: 850px) { 
+
+
+
+#title {
+
+ font-size: 15em;
+
+ }
+
+
+.item3 {
+
+ grid-area: tribute-info;
+ justify-self:center;
+ margin-top: 10px;
+ max-width: 850px ;
+ 
+}
+
+h2 {
+ font-size: 2.5em;
+ text-align: center;
+ margin-bottom: 10px;
+  
+}
+
+
+#tribute-link {
+ font-size: 20px;
+
+
+}
+
+
+.item4 {
+
+ grid-area: quote;
+ font-style: italic;
+ font-size: 1.5em;
+ margin-right: 30px;
+ justify-self:center;
+ max-width: 850px ;
+
+
+}
+
+
+
+}
+
+
+
+
+/* The End */
+
+
+  
+
+
+      
+
+
+
+
+
+
+      
+
